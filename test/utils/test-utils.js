@@ -27,6 +27,8 @@ exports.getCreationFee = function (network) {
     cyber: 7n * 10n ** 14n, // 0.0007 ETH (~$2)
     ham: 7n * 10n ** 14n, // 0.0007 ETH (~$2)
     // Testnets
+    mantaSepoliaTestnet: 15n * 10n ** 14n, // 0.0015 ETH - testnet
+    manta: 15n * 10n ** 14n, // 0.0015 ETH - testnet
     sepolia: 7n * 10n ** 14n, // 0.007 ETH - testnet
     baseSepolia: 0n, // 0 ETH - testnet
     blastSepolia: 0n, // 0 ETH - testnet
@@ -58,6 +60,8 @@ exports.getWETHAddress = function (network) {
     cyber: "0x4200000000000000000000000000000000000006", // WETH
     ham: "0x4200000000000000000000000000000000000006", // WETH
     // Testnets
+    mantaSepoliaTestnet: "0x4a5234941D570D37df3912D299E944feB93d8778", // WETH
+    manta: "0x0Dc808adcE2099A9F62AA87D9670745AbA741746", // WETH
     sepolia: "0xfFf9976782d46CC05630D1f6eBAb18b2324d6B14", // WETH
     baseSepolia: "0x4200000000000000000000000000000000000006", // WETH
     blastSepolia: "0x4200000000000000000000000000000000000023", // WETH (yield accumulating)
@@ -90,8 +94,10 @@ exports.getMaxSteps = function (network) {
     cyber: 1000n, // 30M gas limit
     ham: 1000n, // 30M gas limit
     // Testnets
+    manta: 1000n,
+    mantaSepoliaTestnet: 1000n,
     sepolia: 1000n, // 30M gas limit
-    baseSepolia: 1000n, // 30M gas limit
+    baseSepolia: 1000n, // 30M gas limi
     blastSepolia: 1000n, // 30M gas limit
     avalancheFujiTestnet: 1000n, // ? gas limit
     movementDevnet: 1000n, // ? gas limit
