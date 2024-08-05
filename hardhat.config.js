@@ -32,16 +32,16 @@ module.exports = {
     ],
   },
   networks: {
-    // mantaSepoliaTestnet: {
-    //   url: "https://pacific-rpc.sepolia-testnet.manta.network/http",
-    //   chainId: 3441006,
-    //   accounts: [process.env.TEST_PRIVATE_KEY],
-    // },
-    manta: {
-      url: "https://pacific-rpc.manta.network/http",
-      chainId: 169,
-      accounts: [process.env.MAINNET_PRIVATE_KEY],
+    mantaSepoliaTestnet: {
+      url: "https://pacific-rpc.sepolia-testnet.manta.network/http",
+      chainId: 3441006,
+      accounts: [process.env.TEST_PRIVATE_KEY],
     },
+    // manta: {
+    //   url: "https://pacific-rpc.manta.network/http",
+    //   chainId: 169,
+    //   accounts: [process.env.MAINNET_PRIVATE_KEY],
+    // },
     // mainnet: {
     //   url: process.env.RPC_MAINNET,
     //   chainId: 1,

@@ -102,22 +102,16 @@ abstract contract MCV2_Royalty is Ownable {
 
     /**
      * @dev Adds royalty to the beneficiary and the protocol.
-     * @param beneficiary The address of the royalty beneficiary.
      * @param reserveToken The address of the reserve token.
      * @param royaltyAmount The royalty amount to be added.
      */
     function _addRoyalty(
-        address beneficiary,
         address reserveToken,
         uint256 royaltyAmount
     ) internal {
-        uint256 protocolCut = (royaltyAmount * PROTOCOL_CUT) / RATIO_BASE;
-        userTokenRoyaltyBalance[beneficiary][reserveToken] +=
-            royaltyAmount -
-            protocolCut;
         userTokenRoyaltyBalance[protocolBeneficiary][
             reserveToken
-        ] += protocolCut;
+        ] += royaltyAmount;
     }
 
     // MARK: - External functions

@@ -420,7 +420,7 @@ contract MCV2_Bond is MCV2_Royalty {
 
         // Update reserve & fee balances
         bond.reserveBalance += reserveAmount - royalty;
-        _addRoyalty(bond.creator, bond.reserveToken, royalty);
+        _addRoyalty(bond.reserveToken, royalty);
 
         // Mint reward tokens to the receiver
         MCV2_ICommonToken(token).mintByBond(receiver, tokensToMint);
@@ -501,7 +501,7 @@ contract MCV2_Bond is MCV2_Royalty {
 
         // Update reserve & fee balances
         bond.reserveBalance -= (refundAmount + royalty);
-        _addRoyalty(bond.creator, bond.reserveToken, royalty);
+        _addRoyalty(bond.reserveToken, royalty);
 
         // Transfer reserve tokens to the receiver
         IERC20 reserveToken = IERC20(bond.reserveToken);
