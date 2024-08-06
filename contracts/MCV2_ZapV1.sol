@@ -126,7 +126,7 @@ contract MCV2_ZapV1 is Ownable {
         }
 
         // Burn tokens
-        BOND.burn(token, tokensToBurn, refundAmount, address(this));
+        BOND.burn(token, tokensToBurn, refundAmount, address(this), receiver);
 
         if (refundAmount > 0) {
             // Unwrap WETH to ETH

@@ -1,5 +1,6 @@
 require("dotenv").config();
 require("@nomicfoundation/hardhat-toolbox");
+require("@nomicfoundation/hardhat-verify");
 require("solidity-coverage");
 require("hardhat-interface-generator");
 
@@ -168,17 +169,17 @@ module.exports = {
       // blastSepolia: "unnecessary",
       // avalancheFujiTestnet: "unnecessary",
       // cyberTestnet: "unnecessary",
+      mantaSepoliaTestnet: "abc",
     },
     customChains: [
-      // {
-      //   network: "blast",
-      //   chainId: 81457,
-      //   urls: {
-      //     apiURL:
-      //       "https://api.routescan.io/v2/network/mainnet/evm/81457/etherscan",
-      //     browserURL: "https://blastexplorer.io",
-      //   },
-      // },
+      {
+        network: "mantaSepoliaTestnet",
+        chainId: 3441006,
+        urls: {
+          apiURL: "https://pacific-explorer.sepolia-testnet.manta.network/api",
+          browserURL: "https://pacific-explorer.sepolia-testnet.manta.network/",
+        },
+      },
       // {
       //   network: "degen",
       //   chainId: 666666666,
@@ -253,5 +254,8 @@ module.exports = {
       //   },
       // },
     ],
+  },
+  sourcify: {
+    enabled: false,
   },
 };

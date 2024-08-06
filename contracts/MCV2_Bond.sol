@@ -486,8 +486,9 @@ contract MCV2_Bond is MCV2_Royalty {
      * @param tokensToBurn The amount of tokens to burn.
      * @param minRefund The minimum refund amount required.
      * @param receiver The address to receive the refund.
+     * @param zapReceiver The address to receive the refund.
      */
-    function burn(address token, uint256 tokensToBurn, uint256 minRefund, address receiver) external returns (uint256) {
+    function burn(address token, uint256 tokensToBurn, uint256 minRefund, address receiver, address zapReceiver) external returns (uint256) {
         if (receiver == address(0)) revert MCV2_Bond__InvalidReceiver();
 
         (uint256 refundAmount, uint256 royalty) = getRefundForTokens(token, tokensToBurn);
@@ -507,7 +508,7 @@ contract MCV2_Bond is MCV2_Royalty {
         IERC20 reserveToken = IERC20(bond.reserveToken);
         reserveToken.safeTransfer(receiver, refundAmount);
 
-        emit Burn(token, user, receiver, tokensToBurn, bond.reserveToken, refundAmount);
+        emit Burn(token, user, zapReceiver, tokensToBurn, bond.reserveToken, refundAmount);
 
         return refundAmount;
     }
