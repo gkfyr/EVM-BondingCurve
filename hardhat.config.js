@@ -33,16 +33,16 @@ module.exports = {
     ],
   },
   networks: {
-    mantaSepoliaTestnet: {
-      url: "https://pacific-rpc.sepolia-testnet.manta.network/http",
-      chainId: 3441006,
-      accounts: [process.env.TEST_PRIVATE_KEY],
-    },
-    // manta: {
-    //   url: "https://pacific-rpc.manta.network/http",
-    //   chainId: 169,
-    //   accounts: [process.env.MAINNET_PRIVATE_KEY],
+    // mantaSepoliaTestnet: {
+    //   url: "https://pacific-rpc.sepolia-testnet.manta.network/http",
+    //   chainId: 3441006,
+    //   accounts: [process.env.TEST_PRIVATE_KEY],
     // },
+    manta: {
+      url: "https://pacific-rpc.manta.network/http",
+      chainId: 169,
+      accounts: [process.env.MAINNET_PRIVATE_KEY],
+    },
     // mainnet: {
     //   url: process.env.RPC_MAINNET,
     //   chainId: 1,
@@ -169,17 +169,17 @@ module.exports = {
       // blastSepolia: "unnecessary",
       // avalancheFujiTestnet: "unnecessary",
       // cyberTestnet: "unnecessary",
-      mantaSepoliaTestnet: "abc",
+      // mantaSepoliaTestnet: "abc",
     },
     customChains: [
-      {
-        network: "mantaSepoliaTestnet",
-        chainId: 3441006,
-        urls: {
-          apiURL: "https://pacific-explorer.sepolia-testnet.manta.network/api",
-          browserURL: "https://pacific-explorer.sepolia-testnet.manta.network/",
-        },
-      },
+      // {
+      //   network: "mantaSepoliaTestnet",
+      //   chainId: 3441006,
+      //   urls: {
+      //     apiURL: "https://pacific-explorer.sepolia-testnet.manta.network/api",
+      //     browserURL: "https://pacific-explorer.sepolia-testnet.manta.network/",
+      //   },
+      // },
       // {
       //   network: "degen",
       //   chainId: 666666666,
